@@ -15,10 +15,11 @@ class String
   end
 
   def count_sentences
-    period_split = self.split(". ").flatten
-    question_split = period_split.map { |fragment| fragment.split("? ")}.flatten
-    exclamation_split = question_split.map { |fragment| fragment.split("! ")}.flatten
-    binding.pry
-    return exclamation_split.size
+    # period_split = self.split(". ").flatten
+    # question_split = period_split.map { |fragment| fragment.split("? ")}.flatten
+    # exclamation_split = question_split.map { |fragment| fragment.split("! ")}.flatten
+    # return exclamation_split.size
+
+    self.split(/\. |\? |\! /).size
   end
 end
